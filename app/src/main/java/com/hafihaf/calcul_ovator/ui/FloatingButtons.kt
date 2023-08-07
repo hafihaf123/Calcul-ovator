@@ -1,5 +1,6 @@
 package com.hafihaf.calcul_ovator.ui
 
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
@@ -21,7 +22,6 @@ fun IconFloatingButton(
 ) {
     FloatingActionButton(
         onClick = whenClicked,
-        modifier = Modifier.size(69.dp, 69.dp)
     ) {
         Icon(
             imageVector = iconImage,
@@ -42,13 +42,13 @@ fun TextFloatingButton(
 ) {
     FloatingActionButton(
         onClick = whenClicked,
-        modifier = Modifier.size(69.dp, 69.dp)
     ) {
         Text(
             text = text,
             fontFamily = awesomeFont,
             fontWeight = FontWeight.ExtraBold,
-            fontSize = 35.sp
+            fontSize = 35.sp,
+            modifier = Modifier.padding(10.dp)
         )
     }
 }
